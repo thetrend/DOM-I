@@ -76,3 +76,11 @@ tcPList[1].textContent = siteContent["main-content"]["about-content"];
 tcPList[2].textContent = siteContent["main-content"]["services-content"];
 tcPList[3].textContent = siteContent["main-content"]["product-content"];
 tcPList[4].textContent = siteContent["main-content"]["vision-content"];
+
+// Update Contact
+let contactH4 = document.querySelector('.contact > h4');
+contactH4.textContent = siteContent.contact["contact-h4"];
+let contactPList = document.querySelectorAll('.contact > p');
+contactPList[0].textContent = siteContent.contact.address;
+contactPList[1].textContent = siteContent.contact.phone;
+contactPList[2].textContent = siteContent.contact.email;
