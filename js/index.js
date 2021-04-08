@@ -43,9 +43,28 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Get nav link texts to match
 let navLinks = document.querySelectorAll('nav a');
-navLinks.forEach(navLink => {
-  navLink.textContent = 'say something'
-});
+navLinks[0].textContent = siteContent.nav["nav-item-1"];
+navLinks[1].textContent = siteContent.nav["nav-item-2"];
+navLinks[2].textContent = siteContent.nav["nav-item-3"];
+navLinks[3].textContent = siteContent.nav["nav-item-4"];
+navLinks[4].textContent = siteContent.nav["nav-item-5"];
+navLinks[5].textContent = siteContent.nav["nav-item-6"];
+// Set all nav links to be green
+navLinks.forEach(navLink => navLink.style.color = 'green');
+
+// Prepend fake link
+let homeLink = document.createElement('a');
+homeLink.style.color = 'green';
+homeLink.textContent = 'Home';
+homeLink.href = '#';
+document.querySelector('nav').prepend(homeLink);
+
+// Append another fake link
+let forumLink = document.createElement('a');
+forumLink.style.color = 'green';
+forumLink.textContent = 'Forum';
+forumLink.href = '#';
+document.querySelector('nav').appendChild(forumLink);
 
 // Update CTA h1
 let h1 = document.querySelector('.cta-text > h1');
@@ -84,3 +103,7 @@ let contactPList = document.querySelectorAll('.contact > p');
 contactPList[0].textContent = siteContent.contact.address;
 contactPList[1].textContent = siteContent.contact.phone;
 contactPList[2].textContent = siteContent.contact.email;
+
+// Update Footer
+let footerP = document.querySelector('footer > p');
+footerP.textContent = siteContent.footer.copyright;
