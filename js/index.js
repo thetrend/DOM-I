@@ -40,3 +40,70 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Get nav link texts to match
+let navLinks = document.querySelectorAll('nav a');
+navLinks[0].textContent = siteContent.nav["nav-item-1"];
+navLinks[1].textContent = siteContent.nav["nav-item-2"];
+navLinks[2].textContent = siteContent.nav["nav-item-3"];
+navLinks[3].textContent = siteContent.nav["nav-item-4"];
+navLinks[4].textContent = siteContent.nav["nav-item-5"];
+navLinks[5].textContent = siteContent.nav["nav-item-6"];
+// Set all nav links to be green
+navLinks.forEach(navLink => navLink.style.color = 'green');
+
+// Prepend fake link
+let homeLink = document.createElement('a');
+homeLink.style.color = 'green';
+homeLink.textContent = 'Home';
+homeLink.href = '#';
+document.querySelector('nav').prepend(homeLink);
+
+// Append another fake link
+let forumLink = document.createElement('a');
+forumLink.style.color = 'green';
+forumLink.textContent = 'Forum';
+forumLink.href = '#';
+document.querySelector('nav').appendChild(forumLink);
+
+// Update CTA h1
+let h1 = document.querySelector('.cta-text > h1');
+h1.textContent = siteContent.cta.h1;
+// Update CTA button
+let ctaButton = document.querySelector('.cta-text > button');
+ctaButton.textContent = siteContent.cta.button;
+// Update CTA image
+let ctaImage = document.querySelector('#cta-img');
+ctaImage.src = siteContent.cta["img-src"];
+
+// Update text-content h4s
+let tcH4List = document.querySelectorAll('.text-content > h4');
+tcH4List[0].textContent = siteContent["main-content"]["features-h4"];
+tcH4List[1].textContent = siteContent["main-content"]["about-h4"];
+tcH4List[2].textContent = siteContent["main-content"]["services-h4"];
+tcH4List[3].textContent = siteContent["main-content"]["product-h4"];
+tcH4List[4].textContent = siteContent["main-content"]["vision-h4"];
+
+// Update middle-img
+let middleImg = document.querySelector('#middle-img');
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+// Update text-content p tags
+let tcPList = document.querySelectorAll('.text-content > p');
+tcPList[0].textContent = siteContent["main-content"]["features-content"];
+tcPList[1].textContent = siteContent["main-content"]["about-content"];
+tcPList[2].textContent = siteContent["main-content"]["services-content"];
+tcPList[3].textContent = siteContent["main-content"]["product-content"];
+tcPList[4].textContent = siteContent["main-content"]["vision-content"];
+
+// Update Contact
+let contactH4 = document.querySelector('.contact > h4');
+contactH4.textContent = siteContent.contact["contact-h4"];
+let contactPList = document.querySelectorAll('.contact > p');
+contactPList[0].textContent = siteContent.contact.address;
+contactPList[1].textContent = siteContent.contact.phone;
+contactPList[2].textContent = siteContent.contact.email;
+
+// Update Footer
+let footerP = document.querySelector('footer > p');
+footerP.textContent = siteContent.footer.copyright;
