@@ -40,11 +40,13 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
 // Get nav link texts to match
 let navLinks = document.querySelectorAll('nav a');
 navLinks.forEach(navLink => {
   navLink.textContent = 'say something'
 });
+
 // Update CTA h1
 let h1 = document.querySelector('.cta-text > h1');
 h1.textContent = siteContent.cta.h1;
@@ -54,3 +56,23 @@ ctaButton.textContent = siteContent.cta.button;
 // Update CTA image
 let ctaImage = document.querySelector('#cta-img');
 ctaImage.src = siteContent.cta["img-src"];
+
+// Update text-content h4s
+let tcH4List = document.querySelectorAll('.text-content > h4');
+tcH4List[0].textContent = siteContent["main-content"]["features-h4"];
+tcH4List[1].textContent = siteContent["main-content"]["about-h4"];
+tcH4List[2].textContent = siteContent["main-content"]["services-h4"];
+tcH4List[3].textContent = siteContent["main-content"]["product-h4"];
+tcH4List[4].textContent = siteContent["main-content"]["vision-h4"];
+
+// Update middle-img
+let middleImg = document.querySelector('#middle-img');
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
+// Update text-content p tags
+let tcPList = document.querySelectorAll('.text-content > p');
+tcPList[0].textContent = siteContent["main-content"]["features-content"];
+tcPList[1].textContent = siteContent["main-content"]["about-content"];
+tcPList[2].textContent = siteContent["main-content"]["services-content"];
+tcPList[3].textContent = siteContent["main-content"]["product-content"];
+tcPList[4].textContent = siteContent["main-content"]["vision-content"];
